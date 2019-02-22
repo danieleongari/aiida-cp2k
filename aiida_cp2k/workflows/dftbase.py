@@ -321,6 +321,9 @@ class Cp2kDftBaseWorkChain(WorkChain):
             self.report("Calculation converged, terminating the workflow")
             self.ctx.done = True
 
+        if not converged_scf and not scf_getting_weird(outfile) and self.ctx.nruns>1:
+            raise RuntimeError("Cp2kDftBaseWorkChain: Sorry, SCF does not converge and I don't know why.")
+
     def return_results(self):
         self.out('input_parameters', self.ctx.inputs['parameters'])
         self.out('output_structure', self.ctx.structure)
