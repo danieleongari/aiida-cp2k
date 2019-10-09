@@ -1,4 +1,4 @@
-# AiiDA CP2K
+# AiiDA CP2K (compatible with aiida-core v0.12.3, used for [CURATED-COFs](https://www.doi.org/10.1021/acscentsci.9b00619))
 **The CP2K plugin for the AiiDA workflow and provenance engine.**
 
 
